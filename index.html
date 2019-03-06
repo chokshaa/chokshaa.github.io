@@ -11,6 +11,10 @@
     <link href="bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
+	<style>
+		body {padding-top: 65px}
+	</style>
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -21,25 +25,48 @@
 
   <body>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-md-8">
-          <img width="100%" src="img/WP_20150307_03_56_17_Pro.jpg" />
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">BUFF'S BUTT</a>
         </div>
-        <div class="col-xs-12 col-md-4">
-            <div class="top10">buffbot top 10</div>
-            <ul class="list-group">
-              <li class="list-group-item listItem">1. butt 3</li>
-              <li class="list-group-item listItem">2. buff -1</li>
-            </ul>
-        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Ranker</a></li>
+            <li><a href="#rankings">Current Rankings</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
       </div>
+    </nav>
+	
+	<div class="container image">
+		<img src="img/WP_20150307_03_56_17_Pro.jpg" />
+	</div>
+    
+	<div class="container">
+		<br/>
+		<input type="file" id="listupload" style="display:none"/> 
+    	<button id="importBtn">IMPORT LIST</button>
+    	<button id="exportBtn">EXPORT LIST</button> 
+    	<br/><br/>
+	</div>
+    
+    <div class="container">
+		<table id="rankTable" class="table table-striped">
+			<tbody></tbody>
+		</table>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
-
+	<!-- my functions -->
+	<script src="js/functions.js"></script>
   </body>
 </html>
